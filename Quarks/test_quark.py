@@ -4,19 +4,31 @@ import pytest
 t = Quark()
 
 def test_quark_1():
-    assert t.flip("up") == "down"
+    t.flavor = "up"
+    t.flip()
+    assert t.flavor == "down"
 
 def test_quark_2():
-    assert t.flip("down") == "up"
+    t.flavor = "down"
+    t.flip()
+    assert t.flavor == "up"
 
 def test_quark_3():
-    assert t.flip("top") == "bottom"
+    t.flavor = "top"
+    t.flip()
+    assert t.flavor == "bottom"
 
 def test_quark_4():
-    assert t.flip("bottom") == "top"
+    t.flavor = "bottom"
+    t.flip()
+    assert t.flavor == "top"
 
 def test_quark_5():
-    assert t.flip("strange") == "charm"
+    t.flavor = "strange"
+    t.flip()
+    assert t.flavor == "charm"
 
 def test_quark_6():
-    assert t.flip("charm") == "strange"
+    t.flavor = "charm"
+    t.flip()
+    assert t.flavor == "strange"

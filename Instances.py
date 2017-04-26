@@ -5,13 +5,13 @@ import particle as p
 obs = []
 
 # append the first particle; by the way, append means to add
-obs.append(p.Particle())
+obs.append(p.Particle(1,1,1))
 
 # assign its position
 obs[0].r = {'x': 100.0, 'y': 38.0, 'z': -42.0}
 
 # append the second particle
-obs.append(p.Particle())
+obs.append(p.Particle(1,1,1))
 
 # assign the position of the second particle
 obs[1].r = {'x': 0.01, 'y': 99.0, 'z': 32.0}
